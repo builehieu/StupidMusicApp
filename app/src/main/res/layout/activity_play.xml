@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.builehieu.hat.PlayActivity">>
+
+    <RelativeLayout
+        android:elevation="20dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="24dp">
+
+        <RelativeLayout
+            android:layout_width="24dp"
+            android:layout_height="match_parent">
+            <Button
+                android:layout_centerInParent="true"
+                android:background="@drawable/back"
+                android:layout_width="16dp"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/menu_song"
+            android:layout_width="32dp"
+            android:layout_height="12dp" />
+
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:weightSum="5"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <RelativeLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_weight="3.6"
+            android:layout_height="0dp">
+
+            <android.support.v7.widget.CardView
+                android:layout_marginBottom="5dp"
+                android:id="@+id/card"
+                android:layout_width="240dp"
+                android:layout_centerInParent="true"
+                app:cardElevation="18dp"
+                android:layout_height="240dp">
+
+                <ImageView
+                    android:id="@+id/img_avatar_song"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                     />
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:textAlignment="center"
+                android:id="@+id/txtSongName"
+                android:textSize="20sp"
+                android:text="Song name"
+                android:singleLine="true"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/card"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"/>
+
+            <TextView
+                android:id="@+id/txtSingerName"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_below="@+id/txtSongName"
+                android:layout_centerInParent="true"
+                android:text="Singer name"
+                android:textAlignment="center"
+                android:textSize="16sp" />
+
+
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:weightSum="5"
+            android:layout_marginEnd="34dp"
+            android:layout_marginStart="34dp"
+            android:layout_weight="0.4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <TextView
+                android:id="@+id/txtPlaytime"
+                android:layout_gravity="center|start"
+                android:textAlignment="textStart"
+                android:text="0:00"
+                android:textSize="14sp"
+                android:layout_weight="0.8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_weight="0.8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+            <ImageView
+                android:layout_gravity="center"
+                android:background="@drawable/visualer"
+                android:layout_weight="1.6"
+                android:layout_width="0dp"
+                android:layout_height="28dp" />
+
+
+            <LinearLayout
+                android:layout_weight="0.8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"/>
+
+
+            <TextView
+                android:id="@+id/txtDuration"
+                android:layout_gravity="center_vertical|end"
+                android:textAlignment="textEnd"
+                android:fontFamily="sans-serif"
+                android:text="3:44"
+                android:textSize="14sp"
+                android:layout_weight="0.8"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="10"
+            android:layout_marginEnd="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_weight="0.9"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <RelativeLayout
+
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="48dp" >
+
+                <Button
+                    android:layout_centerInParent="true"
+                    android:layout_width="26dp"
+                    android:layout_height="22dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="48dp" >
+
+                <Button
+                    android:id="@+id/btPrevious"
+                    android:rotation="180"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/next"
+                    android:layout_width="32dp"
+                    android:layout_height="18dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="48dp" >
+
+                <Button
+                    android:id="@+id/btPlay"
+                    android:background="@drawable/ic_pause_black_24dp"
+                    android:layout_width="36dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="48dp" >
+
+                <Button
+                    android:id="@+id/btNext"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/next"
+                    android:layout_width="32dp"
+                    android:layout_height="18dp"/>
+
+
+            </RelativeLayout>
+
+
+
+
+            <RelativeLayout
+
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="48dp" >
+
+                <Button
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/loop"
+                    android:layout_width="26dp"
+                    android:layout_height="22dp" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
